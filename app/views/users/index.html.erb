@@ -1,0 +1,9 @@
+<% @posts.each do |post| %>
+    <%= link_to "/posts/#{post.id}" do %>
+        <%= post.name %>
+        <%= post.body %>
+        <% post.images.each do |image| %>
+            <%= image_tag(image, width:100) %>
+        <% end %>
+    <%  end%>
+<% end %>
